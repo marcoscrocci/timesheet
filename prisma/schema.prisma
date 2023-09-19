@@ -10,28 +10,34 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model UsuarioProjeto {
-  //id        Int      @id @default(autoincrement())
-  usuarioId Int
-  projetoId Int
-
-  usuario Usuario @relation(fields: [usuarioId], references: [id])
-  projeto Projeto @relation(fields: [projetoId], references: [id])
-
-  @@id([usuarioId, projetoId])
-}
-
 model Usuario {
-  id             Int              @id @default(autoincrement())
-  email          String
-  nome           String?
-  projetos       Projeto[]        @relation("UsuarioProjeto")
-  UsuarioProjeto UsuarioProjeto[]
+  id              Int              @id @default(autoincrement())
+  email           String           @unique
+  nome            String?
+  criado_em       DateTime         @default(now())
+  alterado_em     DateTime         @default(now()) @updatedAt
+  usuario_projeto UsuarioProjeto[]
+
+  @@map("usuarios")
 }
 
 model Projeto {
-  id             Int              @id @default(autoincrement())
-  nome           String
-  membros        Usuario[]        @relation("UsuarioProjeto")
-  UsuarioProjeto UsuarioProjeto[]
+  id              Int              @id @default(autoincrement())
+  nome            String           @unique
+  criado_em       DateTime         @default(now())
+  alterado_em     DateTime         @default(now()) @updatedAt
+  usuario_projeto UsuarioProjeto[]
+
+  @@map("projetos")
+}
+
+model UsuarioProjeto {
+  id         Int     @id @default(autoincrement())
+  usuario_id Int
+  usuario    Usuario @relation(fields: [usuario_id], references: [id])
+  projeto_id Int
+  projeto    Projeto @relation(fields: [projeto_id], references: [id])
+
+  @@map("usuarios_projetos")
+  @@index([usuario_id, projeto_id], name: "usuario_projeto_index")
 }
