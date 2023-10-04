@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-10-03T19:17:07.380Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.7.5 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="T7m387A1Y5SQI0EX3DX6" version="21.7.5" type="device">
+<mxfile host="Electron" modified="2023-10-04T13:23:35.755Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="vOf3FlDk3yROsi2v4E1r" version="22.0.2" type="device">
   <diagram id="dXupZ79hsTiyQ5-BNEvF" name="Page-1">
-    <mxGraphModel dx="989" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -122,10 +122,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="azZxZeqmAoJDCEGVXQoR-22" value="User" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
-          <mxGeometry x="73" y="626" width="142" height="144" as="geometry" />
+          <mxGeometry x="73" y="626" width="142" height="164" as="geometry" />
         </mxCell>
-        <mxCell id="azZxZeqmAoJDCEGVXQoR-23" value="ID: Integer&#xa;login: String&#xa;password: String&#xa;person: Person&#xa;created_at: Date&#xa;modified_at: Date&#xa;enabled: Boolean" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="azZxZeqmAoJDCEGVXQoR-22" vertex="1">
-          <mxGeometry y="30" width="142" height="114" as="geometry" />
+        <mxCell id="azZxZeqmAoJDCEGVXQoR-23" value="ID: Integer&#xa;login: String&#xa;password: String&#xa;tfs_token: String&#xa;tfs_token_expires: Date&#xa;person: Person&#xa;created_at: Date&#xa;modified_at: Date&#xa;enabled: Boolean" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="azZxZeqmAoJDCEGVXQoR-22" vertex="1">
+          <mxGeometry y="30" width="142" height="134" as="geometry" />
         </mxCell>
         <mxCell id="azZxZeqmAoJDCEGVXQoR-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;" parent="1" source="WrPAGcL8VzTFxhTmAevk-2" target="azZxZeqmAoJDCEGVXQoR-22" edge="1">
           <mxGeometry relative="1" as="geometry" />
